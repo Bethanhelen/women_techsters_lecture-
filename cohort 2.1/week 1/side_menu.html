@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side-menu</title>
+    <style>
+        .side-menu {
+            list-style: none;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+        }
+        
+        .side-menu li {
+            font-size: 18px;
+            line-height: 2.4rem;
+            border-bottom: dotted 1px #ddd;
+            width: 70px;
+        }
+        
+        .side-menu li a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .side-menu li a:hover {
+            color: coral;
+        }
+        /* float */
+        
+        .navbar {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: #4c6ca0;
+            overflow: auto;
+            border-radius: 5px;
+        }
+        
+        .navbar li {
+            float: left;
+        }
+        
+        .navbar li a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 20px;
+        }
+        
+        .navbar li a:hover {
+            background-color: #446190;
+        }
+        /* flex */
+        
+        .item {
+            background-color: #f4f4f4;
+            border: #ccc solid 1px;
+            text-align: center;
+            margin: 0.75rem;
+            padding: 1rem;
+            /* to have it spanning the screen width you use flex equals 1 */
+            flex: 1;
+        }
+        
+        #container {
+            display: flex;
+            /* to adjust ur object to ur screen size */
+            flex-wrap: wrap;
+            /* to rearrange elements on the screen in reverse direction */
+            flex-direction: row-reverse;
+        }
+        /* pseudo selector targetting the child */
+        
+        .item:first-child {
+            flex: 2;
+        }
+        /* flex align */
+        
+        .items {
+            background-color: #f4f4f4;
+            border: solid 1px #ccc;
+            text-align: center;
+            padding: 1rem;
+            margin: 0.5rem;
+            /* to give width to each flex item */
+            flex-basis: 200px;
+        }
+        
+        #container-box {
+            display: flex;
+            background-color: #333;
+            height: 600px;
+            /* align-horizontal */
+            justify-content: space-around;
+            /* vertical alignment */
+            align-items: flex-start;
+        }
+        
+        .item-2 {
+            align-self: center;
+        }
+        
+        .item-3 {
+            align-self: flex-end;
+        }
+        /* change order i.e to rearrange position*/
+        
+        .item-1 {
+            order: 3;
+        }
+        
+        .item-2 {
+            order: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="side-menu">
+        <li>
+            <a href="">Home</a>
+        </li>
+        <li>
+            <a href="">About</a>
+        </li>
+        <li>
+            <a href="">Services</a>
+        </li>
+        <li>
+            <a href="">Contact</a>
+        </li>
+    </ul>
+    <ul class="navbar">
+        <li>
+            <a href="">Home</a>
+        </li>
+        <li>
+            <a href="">About</a>
+        </li>
+        <li>
+            <a href="">Services</a>
+        </li>
+        <li>
+            <a href="">Contact</a>
+        </li>
+    </ul>
+
+    <!--basic flex-->
+    <div id="container">
+        <div class="item">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item">
+            <h3>Item 3</h3>
+        </div>
+        <!-- <div class="item">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item">
+            <h3>Item 3</h3>
+        </div>
+        <div class="item">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item">
+            <h3>Item 3</h3>
+        </div>
+        <div class="item">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item">
+            <h3>Item 3</h3>
+        </div>-->
+    </div>
+
+
+    <!--flex align-->
+
+    <div id="container-box">
+        <div class="items item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="items item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="items item-3">
+            <h3>Item 3</h3>
+        </div>
+    </div>
+    <!--flex flow is a combination of flex direction and flex wrap property-->
+    <!--flex can specify the flex-grow and flex-basis-->
+
+</body>
+
+</html>

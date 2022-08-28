@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic css</title>
+    <style>
+        /* . is for classes */
+        
+        .primary-heading {
+            color: green;
+        }
+        /* # is for IDs */
+        /* multiple selection */
+        
+        #welcome,
+        #about {
+            background-color: #d1a0a0;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        /* nesting selection */
+        
+        #welcome p {
+            font-size: 20px;
+        }
+        /* color */
+        
+        h2 {
+            color: white;
+        }
+        
+        h3 {
+            color: rgb(120, 40, 220);
+        }
+        
+        h3 {
+            color: #d1a0a0;
+        }
+        /* box model */
+        
+        .box {
+            background-color: #f4f4f4;
+            width: 500px;
+            border: 2px #777 solid;
+            /* padding on all sides */
+            padding: 20px;
+            /* margin on all sides */
+            margin: 20px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* float and align */
+        
+        .container {
+            /* max-width aids in responsiveness in various screen */
+            max-width: 960px;
+            margin: 30px auto;
+        }
+        
+        .boxes {
+            background-color: #f4f4f4;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        
+        #box2 {
+            float: left;
+            width: 70%;
+        }
+        
+        #box3 {
+            float: right;
+            width: 20%;
+        }
+        /* u must add a clear anytime u want insert another div after a float  */
+        
+        .clear {
+            clear: both;
+        }
+        /* links */
+        
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        /* a:hover { 
+            color: coral;
+            text-decoration: underline;
+            font-size: 40px;
+        }
+        
+        a:active {
+            color: blue;
+        }
+        
+        a:visited {
+            color: red;
+        }*/
+        
+        .btn {
+            background-color: #4c6ca0;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .btn:hover {
+            columns: #f4f4f4;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red;">heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+
+    <!--css selectors-->
+    <div id="welcome">
+        <h2 class="primary-heading">Welcome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias odit quod temporibus fugit ea sapiente sunt rem! Eligendi, quaerat aperiam!</p>
+    </div>
+    <div id="about">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias odit quod temporibus fugit ea sapiente sunt rem! Eligendi, quaerat aperiam!</p>
+    </div>
+
+    <!--box-model how elements are placed on the browser-->
+
+    <div class="box">
+        <h3>Box one</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusantium repellendus tempora nesciunt voluptate voluptates, adipisci a obcaecati exercitationem reprehenderit.</p>
+    </div>
+    <div class="box">
+        <h3>Box two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur accusantium repellendus tempora nesciunt voluptate voluptates, adipisci a obcaecati exercitationem reprehenderit.</p>
+    </div>
+
+
+    <!--float and align-->
+
+    <div class="container">
+        <div class="boxes" id="box1">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorum harum repellendus veritatis et voluptates eveniet, placeat amet! Tenetur, illum?</p>
+        </div>
+        <div class="boxes" id="box2">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorum harum repellendus veritatis et voluptates eveniet, placeat amet! Tenetur, illum?</p>
+        </div>
+        <div class="boxes" id="box3">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorum harum repellendus veritatis et voluptates eveniet, placeat amet! Tenetur, illum?</p>
+        </div>
+        <div class="clear"></div>
+        <div class="boxes" id="box4">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dolorum harum repellendus veritatis et voluptates eveniet, placeat amet! Tenetur, illum?</p>
+        </div>
+    </div>
+
+    <!--links-->
+    <a href="#" class="btn">My link</a><br><br>
+    <button class="btn">My button</button>
+</body>
+
+
+</html>
