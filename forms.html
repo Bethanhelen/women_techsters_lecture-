@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+            <label for="email">Email</label><br>
+            <input type="email" id="email">
+        </div>
+        <div>
+            <label for="Message">Message</label><br>
+            <textarea name="" id="Message" cols="30" rows="5"></textarea>
+        </div>
+        <div>
+            <label for="">Sex</label>
+            <select name="" id="">
+                <option value="">Please select...</option>
+                <option value="male">Male</option>
+                <option value="female" selected>Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Age</label><br>
+            <input type="number" name="" id="">
+        </div>
+        <div>
+            <label for="">Date of birth</label><br>
+            <input type="date" name="" id="">
+        </div>
+        <div>
+            <label for="membership">Membership</label>
+            <input type="radio" name="membership" id="membership" value="simple">Simple
+            <input type="radio" name="membership" id="membership" value="standard" checked>Standard
+            <input type="radio" name="membership" id="membership" value="super">Super
+        </div>
+        <div>
+            <label for="likes">likes</label><br>
+            <label for="">Fast Cars</label>
+            <input type="checkbox" name="likes" id="likes" value=""><br>
+            Travelling
+            <input type="checkbox" name="likes" id="likes" value=""><br>
+            Dancing
+            <input type="checkbox" name="likes" id="likes" value=""><br>
+            Money
+            <input type="checkbox" name="likes" id="likes" value=""><br>
+            Food
+            <input type="checkbox" name="likes" id="likes" value="" checked><br>
+        </div> 
+        <button type="submit">Submit</button> 
+    </form>
+</body>
+
+</html>
